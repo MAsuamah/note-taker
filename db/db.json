@@ -1,13 +1,1 @@
-{
-  "notes": [
-    {
-      "title": "Test Title",
-      "text": "Test text"
-    },
-    {
-      "title": "Pat",
-      "text": "Nat",
-      "id": "7ff1a0af-7030-4568-ae19-1b307a8529fc"
-    }
-  ]
-}
+[{"title":"Test Title","text":"Test text"}]
