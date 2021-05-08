@@ -15,16 +15,14 @@ const notes = require('./db/db');
 
 function createNewNotes (body, notesArray) {
   const note = body;
-  console.log(note)
   notesArray.push(note);
   fs.writeFileSync(
     path.join(__dirname, './db/db.json'),
-    JSON.stringify({ notes: notesArray }, null, 2)
+    JSON.stringify(notesArray, null, 2)
   );
-  // return finished code to post route for response
+  
   return note;
 }
-
 
 
 app.get('/api/notes', (req,res) => {
@@ -37,7 +35,17 @@ app.post('/api/notes', (req, res) => {
   res.json(note);
 });
 
+app.delete('/api/notes/:id', (req, res) => {
+  const id = req.params.id;
+  notes.splice(notes.findIndex( note => note.id === id), 1)
+  fs.writeFileSync(
+    path.join( __dirname, './db/db.json' ),
+    JSON.stringify(notes, null, 1 )
+  );
 
+  res.json(notes)
+
+});
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
@@ -50,7 +58,6 @@ app.get('/notes', (req, res) => {
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
 });
-
 
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}!`);
