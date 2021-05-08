@@ -25,6 +25,8 @@ function createNewNotes (body, notesArray) {
   return note;
 }
 
+
+
 app.get('/api/notes', (req,res) => {
   res.json(notes);
 });
@@ -34,6 +36,8 @@ app.post('/api/notes', (req, res) => {
   const note = createNewNotes(req.body, notes)
   res.json(note);
 });
+
+
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
