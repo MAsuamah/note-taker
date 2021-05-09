@@ -18,7 +18,7 @@ The note taker is a quick and easy way to organize your thoughts and keep track 
 * The note will immediately appear in the left sidebar so that it can be later reviewed.
 
 ### Review Old Notes
-* To review an old note, click on the title of the note you would like to review in the left-hand column. 
+* To review an old note, click on the title of the note you would like to review. 
 * Once you click on the title, the full note will appear on the right.
 
 ### Delete a Note From the SideBar
