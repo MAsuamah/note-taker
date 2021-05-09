@@ -1,4 +1,7 @@
 # Note Taker
+
+## Description
+
 We've all had moments where we quickly needed to write down important information, thoughts or even brainstorming ideas.
 The note taker is a quick and easy way to organize your thoughts and keep track of tasks you need to complete. 
 
